@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en-IN" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self' 'sha256-iKB9+MoZyrtdY/hEkIeQxQBS/Gaf3f6PuzLPJSnBaiU='; base-uri 'self'; form-action 'none'; object-src 'none'">
+  <script>(function(){var d=document.documentElement,t='dark';d.classList.add('js');try{var q=location.search.match(/[?&]theme=(light|dark)/);t=q?q[1]:(localStorage.getItem('am-theme')||'dark');}catch(e){}d.setAttribute('data-theme',t==='light'?'light':'dark');})();</script>
+  <title>Security &amp; Responsible AI · Agent Mesh</title>
+  <meta name="description" content="How Agent Mesh handles client data, access, model providers, human approval, incidents and responsible AI.">
+  <link rel="canonical" href="https://agentmesh.co.in/security/">
+  <meta name="theme-color" content="#111316">
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/schibsted-grotesk-400-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/fonts/fonts.css">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <link rel="stylesheet" href="/assets/brand/hero.css">
+  <script src="/assets/theme.js" defer></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Agent Mesh">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:title" content="Security &amp; Responsible AI · Agent Mesh">
+  <meta property="og:description" content="How Agent Mesh handles client data, access, model providers, human approval, incidents and responsible AI.">
+  <meta property="og:url" content="https://agentmesh.co.in/security/">
+  <meta property="og:image" content="https://agentmesh.co.in/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Agent Mesh",
+  "legalName": "AGENT MESH TECHNOLOGIES PRIVATE LIMITED",
+  "url": "https://agentmesh.co.in",
+  "logo": "https://agentmesh.co.in/assets/brand/logo-512.png",
+  "email": "info@agentmesh.co.in",
+  "founder": {
+    "@type": "Person",
+    "name": "Uday Bhan Singh",
+    "jobTitle": "Founder & Director",
+    "sameAs": [
+      "https://www.linkedin.com/in/uday-bhan-singh-875560147/"
+    ]
+  },
+  "telephone": "+91 93368 35520",
+  "taxID": "09ABGCA0421K1ZU",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Uttar Pradesh",
+    "addressCountry": "IN",
+    "streetAddress": "77K, Semara Baraho, Near Primary School, Rajgarh, Mirzapur, Uttar Pradesh 231001, India"
+  }
+}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Agent Mesh, home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="3 22.6 114 90.4" aria-hidden="true" focusable="false" class="logo-mark"><defs><clipPath id="hm-clip"><path d="M6 110L39.76 25.6H80.24L114 110Z"/></clipPath><mask id="hm-m0" maskUnits="userSpaceOnUse" x="-20" y="-20" width="160" height="160"><rect x="-20" y="-20" width="160" height="160" fill="#fff"/><line x1="7.2" y1="114" x2="54.4" y2="-4" stroke-width="8.8" stroke="#000"/><line x1="17.2" y1="114" x2="64.4" y2="-4" stroke-width="8.8" stroke="#000"/><line x1="27.2" y1="114" x2="74.4" y2="-4" stroke-width="8.8" stroke="#000"/><line x1="16" y1="78" x2="104" y2="78" stroke-width="10" stroke="#000"/><line x1="28.06" y1="86.84" x2="35.14" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="81.94" y1="86.84" x2="74.86" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="101.94" y1="86.84" x2="94.86" y2="69.16" stroke-width="8.8" stroke="#000"/></mask><mask id="hm-m1" maskUnits="userSpaceOnUse" x="-20" y="-20" width="160" height="160"><rect x="-20" y="-20" width="160" height="160" fill="#fff"/><line x1="16" y1="78" x2="104" y2="78" stroke-width="10" stroke="#000"/><line x1="28.06" y1="86.84" x2="35.14" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="81.94" y1="86.84" x2="74.86" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="101.94" y1="86.84" x2="94.86" y2="69.16" stroke-width="8.8" stroke="#000"/></mask><mask id="hm-m2" maskUnits="userSpaceOnUse" x="-20" y="-20" width="160" height="160"><rect x="-20" y="-20" width="160" height="160" fill="#fff"/><line x1="16" y1="78" x2="104" y2="78" stroke-width="10" stroke="#000"/><line x1="28.06" y1="86.84" x2="35.14" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="81.94" y1="86.84" x2="74.86" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="101.94" y1="86.84" x2="94.86" y2="69.16" stroke-width="8.8" stroke="#000"/></mask><mask id="hm-m3" maskUnits="userSpaceOnUse" x="-20" y="-20" width="160" height="160"><rect x="-20" y="-20" width="160" height="160" fill="#fff"/><line x1="28.06" y1="86.84" x2="35.14" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="81.94" y1="86.84" x2="74.86" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="101.94" y1="86.84" x2="94.86" y2="69.16" stroke-width="8.8" stroke="#000"/></mask></defs><g clip-path="url(#hm-clip)"><g mask="url(#hm-m0)"><line x1="113.32" y1="115.3" x2="65.08" y2="-5.3" stroke-width="5.6" class="wa-ink"/><line x1="103.32" y1="115.3" x2="55.08" y2="-5.3" stroke-width="5.6" class="wa-ink"/><line x1="93.32" y1="115.3" x2="45.08" y2="-5.3" stroke-width="5.6" class="wa-ink"/></g><g mask="url(#hm-m1)"><line x1="6.68" y1="115.3" x2="54.92" y2="-5.3" stroke-width="5.6" class="wa-ink"/><line x1="16.68" y1="115.3" x2="64.92" y2="-5.3" stroke-width="5.6" class="wa-ink"/><line x1="26.68" y1="115.3" x2="74.92" y2="-5.3" stroke-width="5.6" class="wa-ink"/></g><g mask="url(#hm-m2)"></g><g mask="url(#hm-m3)"><line x1="14.6" y1="78" x2="105.4" y2="78" stroke-width="6.8" class="wa-acc"/></g><g><line x1="27.54" y1="88.14" x2="35.66" y2="67.86" stroke-width="5.6" class="wa-ink"/><line x1="82.46" y1="88.14" x2="74.34" y2="67.86" stroke-width="5.6" class="wa-ink"/><line x1="102.46" y1="88.14" x2="94.34" y2="67.86" stroke-width="5.6" class="wa-ink"/></g></g></svg><span>Agent Mesh</span></a>
+      <nav class="nav-desktop" aria-label="Main">
+        <ul>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/industries/">Industries</a></li>
+          <li><a href="/approach/">Approach</a></li>
+          <li><a href="/examples/">Examples</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>
+        <span class="sr-only">Light theme</span>
+      </button>
+      <a class="btn btn-primary btn-sm header-cta" href="https://calendar.app.google/BER3Jf25E2911B2P7">Book a call</a>
+      <details class="nav-mobile">
+        <summary>Menu</summary>
+        <nav aria-label="Main, mobile">
+          <ul>
+            <li><a href="https://calendar.app.google/BER3Jf25E2911B2P7">Book a call</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/industries/">Industries</a></li>
+            <li><a href="/approach/">Approach</a></li>
+            <li><a href="/examples/">Examples</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow">Trust</p>
+    <h1>Security &amp; Responsible AI</h1>
+    <p class="lead">How we handle your data and keep people in control. The binding terms for each engagement are in your signed agreement.</p>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="container prose">
+    <p class="draft-note">Draft: to be reviewed.</p>
+    <h2>Your data</h2>
+    <p>Where possible, systems run in your own cloud account. Otherwise they run on named sub-processors in a region you choose. Your data is never used to train models. Retention and deletion are set out in the contract.</p>
+    <h2>Access</h2>
+    <p>We use least-privilege access, 2-step verification on all company accounts, and access logs.</p>
+    <h2>AI models</h2>
+    <p>We choose the model provider with you for each engagement, and use only providers whose enterprise terms exclude training on client data.</p>
+    <h2>People in the loop</h2>
+    <p>Actions with real impact, such as payments, HR decisions or commitments to customers, need a person's approval.</p>
+    <h2>Incidents</h2>
+    <p>If something goes wrong, we tell you promptly. Where the law applies, we report incidents to CERT-In within the required time.</p>
+    <h2>Responsible AI</h2>
+    <ul>
+      <li>Every system is tested against an agreed set of cases (evaluations) before launch.</li>
+      <li>No fully automated decisions about people without human review.</li>
+      <li>We are open about what the AI does and where it can be wrong.</li>
+    </ul>
+    <p>Questions: <a href="mailto:info@agentmesh.co.in">info@agentmesh.co.in</a></p>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="3 22.6 114 90.4" aria-hidden="true" focusable="false" class="logo-mark"><defs><clipPath id="fm-clip"><path d="M6 110L39.76 25.6H80.24L114 110Z"/></clipPath><mask id="fm-m0" maskUnits="userSpaceOnUse" x="-20" y="-20" width="160" height="160"><rect x="-20" y="-20" width="160" height="160" fill="#fff"/><line x1="7.2" y1="114" x2="54.4" y2="-4" stroke-width="8.8" stroke="#000"/><line x1="17.2" y1="114" x2="64.4" y2="-4" stroke-width="8.8" stroke="#000"/><line x1="27.2" y1="114" x2="74.4" y2="-4" stroke-width="8.8" stroke="#000"/><line x1="16" y1="78" x2="104" y2="78" stroke-width="10" stroke="#000"/><line x1="28.06" y1="86.84" x2="35.14" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="81.94" y1="86.84" x2="74.86" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="101.94" y1="86.84" x2="94.86" y2="69.16" stroke-width="8.8" stroke="#000"/></mask><mask id="fm-m1" maskUnits="userSpaceOnUse" x="-20" y="-20" width="160" height="160"><rect x="-20" y="-20" width="160" height="160" fill="#fff"/><line x1="16" y1="78" x2="104" y2="78" stroke-width="10" stroke="#000"/><line x1="28.06" y1="86.84" x2="35.14" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="81.94" y1="86.84" x2="74.86" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="101.94" y1="86.84" x2="94.86" y2="69.16" stroke-width="8.8" stroke="#000"/></mask><mask id="fm-m2" maskUnits="userSpaceOnUse" x="-20" y="-20" width="160" height="160"><rect x="-20" y="-20" width="160" height="160" fill="#fff"/><line x1="16" y1="78" x2="104" y2="78" stroke-width="10" stroke="#000"/><line x1="28.06" y1="86.84" x2="35.14" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="81.94" y1="86.84" x2="74.86" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="101.94" y1="86.84" x2="94.86" y2="69.16" stroke-width="8.8" stroke="#000"/></mask><mask id="fm-m3" maskUnits="userSpaceOnUse" x="-20" y="-20" width="160" height="160"><rect x="-20" y="-20" width="160" height="160" fill="#fff"/><line x1="28.06" y1="86.84" x2="35.14" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="81.94" y1="86.84" x2="74.86" y2="69.16" stroke-width="8.8" stroke="#000"/><line x1="101.94" y1="86.84" x2="94.86" y2="69.16" stroke-width="8.8" stroke="#000"/></mask></defs><g clip-path="url(#fm-clip)"><g mask="url(#fm-m0)"><line x1="113.32" y1="115.3" x2="65.08" y2="-5.3" stroke-width="5.6" class="wa-ink"/><line x1="103.32" y1="115.3" x2="55.08" y2="-5.3" stroke-width="5.6" class="wa-ink"/><line x1="93.32" y1="115.3" x2="45.08" y2="-5.3" stroke-width="5.6" class="wa-ink"/></g><g mask="url(#fm-m1)"><line x1="6.68" y1="115.3" x2="54.92" y2="-5.3" stroke-width="5.6" class="wa-ink"/><line x1="16.68" y1="115.3" x2="64.92" y2="-5.3" stroke-width="5.6" class="wa-ink"/><line x1="26.68" y1="115.3" x2="74.92" y2="-5.3" stroke-width="5.6" class="wa-ink"/></g><g mask="url(#fm-m2)"></g><g mask="url(#fm-m3)"><line x1="14.6" y1="78" x2="105.4" y2="78" stroke-width="6.8" class="wa-acc"/></g><g><line x1="27.54" y1="88.14" x2="35.66" y2="67.86" stroke-width="5.6" class="wa-ink"/><line x1="82.46" y1="88.14" x2="74.34" y2="67.86" stroke-width="5.6" class="wa-ink"/><line x1="102.46" y1="88.14" x2="94.34" y2="67.86" stroke-width="5.6" class="wa-ink"/></g></g></svg><span>Agent Mesh</span></a>
+          <p>Enterprise AI, implemented. AI agents for finance, HR, operations and customer teams.</p>
+        </div>
+        <nav aria-label="Company">
+          <h2>Company</h2>
+          <ul>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/industries/">Industries</a></li>
+            <li><a href="/approach/">Approach</a></li>
+            <li><a href="/examples/">Examples</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Trust and legal">
+          <h2>Trust &amp; legal</h2>
+          <ul>
+            <li><a href="/security/">Security &amp; Responsible AI</a></li>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms of Service</a></li>
+            <li><a href="/refund-policy/">Refund &amp; Cancellation</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="https://calendar.app.google/BER3Jf25E2911B2P7">Book a call</a></li>
+            <li><a href="mailto:info@agentmesh.co.in">info@agentmesh.co.in</a></li>
+            <li><a href="tel:+919336835520">+91 93368 35520</a></li>
+            <li><a href="/contact/">All contact details</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">
+        <p><strong>AGENT MESH TECHNOLOGIES PRIVATE LIMITED</strong></p>
+        <p>CIN: U62020UP2026PTC249594 · GSTIN: 09ABGCA0421K1ZU</p>
+        <p>Registered office: 77K, Semara Baraho, Near Primary School, Rajgarh, Mirzapur, Uttar Pradesh 231001, India</p>
+        <p>Grievance contact: Uday Bhan Singh, <a href="mailto:info@agentmesh.co.in">info@agentmesh.co.in</a></p>
+        <p>&copy; 2026 AGENT MESH TECHNOLOGIES PRIVATE LIMITED</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
